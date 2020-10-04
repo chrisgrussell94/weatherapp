@@ -12,30 +12,30 @@
 
 <body>
   <nav class="row" style="background: white; color: black;">
-    <h1 class="col-md-3 text-center">Weather App</h1>
+    <h1><center>Weather App</center></h1>
   </nav>
   <br />
-  <br />
   <center class="row">
-    <form method="post" class="col-md-6 col-md-offset-3">
+    <form method="post" class="col-md-6 col-md-offset-4">
       <div class="input-group">
         <input type="text" class="form-control" name="city" placeholder="Search city">
         <div class="input-group-btn">
-          <button class="btn btn-primary" type="submit">
+          <button class="btn btn-danger" type="submit">
             <i class="glyphicon glyphicon-search"></i>
           </button>
         </div>
     </form>
   </center>
   <div class="row">
-    {% if data.country_code and data.coordinate and data.temp and data.pressure and data.humidity %}
-    <div class="col-md-6 col-md-offset-3">
-      <h1>country code : {{data.country_code}}</h1>
-        <h5>City name : {{data.cityname}}</h5>
-        <h5>temp (in celcius) : {{data.temp_far}}</h5>
-        <h5>humidity : {{data.humidity}}</h5>
+    <div class="col-lg-6 col-lg-offset-4">
+      <h5><strong>City Name : {{data.cityname}}</strong></h5>
+    <br>
+      <h5><strong>Temp (in farenheit) : {{data.temp_far}}</strong></h5>
+      <br>
+      <h5><strong>Humidity : {{data.humidity}}</strong></h5>
+      <br>
+      <h5><strong>Description: {{data.description}}</strong></h5>
     </div>
-    {% endif %}
   </div>
 </body>
 
